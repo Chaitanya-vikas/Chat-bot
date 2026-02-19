@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django AI Assistant</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>🤖 AI Chat Assistant</h2>
+        </div>
+        <div class="chat-box" id="chat-box">
+            <div class="message bot-message">Hello! Ask me about our products.</div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type here..." onkeypress="handleEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
