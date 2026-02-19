@@ -1,1 +1,21 @@
+.# Security (NEVER UPLOAD THESE)
 .env
+.env.*
+
+# Python Cache (Junk files that slow down uploads)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments (If you used one)
+venv/
+env/
+.venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Static files collected during deployment
+staticfiles/
