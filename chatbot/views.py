@@ -4,9 +4,13 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from .models import Product
 import google.generativeai as genai
-
+from dotenv import load_dotenv
+import os
 # --- CONFIGURATION ---
-# This tells Python to look for a hidden password on the server
+# Load the hidden passwords from the .env file
+load_dotenv()
+
+# Now os.getenv will successfully find it!
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
 
